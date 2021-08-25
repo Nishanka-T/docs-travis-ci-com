@@ -280,19 +280,3 @@ These archives are available for on-demand installation.
 | {{ file.release }} | {{ file.arch }} | {{ file.name }} |{% endfor %}
 {% endif %}
 
-<script src="{{ "/assets/javascripts/tablefilter/dist/tablefilter/tablefilter.js" | prepend: site.baseurl }}" type="text/javascript" charset="utf-8"></script>
-<script>
-var tf = new TableFilter(document.querySelector('#python-versions-table'), {
-    base_path: '/assets/javascripts/tablefilter/dist/tablefilter/',
-    col_0: 'select',
-    col_1: 'select',
-    col_2: 'none',
-    col_widths: ['100px', '100px', '250px'],
-    alternate_rows: true,
-    no_results_message: true
-});
-tf.init();
-tf.setFilterValue(0, "16.04");
-tf.setFilterValue(1, "x86_64");
-tf.filter();
-</script>
